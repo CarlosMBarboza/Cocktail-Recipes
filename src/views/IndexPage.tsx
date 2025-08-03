@@ -2,8 +2,10 @@
 
 const IndexPage = () => {
   return (
-    <div>IndexPage</div>
-  )
-}
+    <>
+     <h1>Inicio</h1>
+    </>
+  );
+};
 
-export default IndexPage
+export default IndexPage;

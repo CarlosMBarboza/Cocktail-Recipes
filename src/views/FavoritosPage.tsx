@@ -2,8 +2,10 @@
 
 const FavoritosPage = () => {
   return (
-    <div>FavoritosPage</div>
-  )
-}
+    <>
+      <h1>Favoritos</h1>
+    </>
+  );
+};
 
-export default FavoritosPage
+export default FavoritosPage;
