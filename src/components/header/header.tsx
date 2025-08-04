@@ -1,12 +1,14 @@
 
-import { NavLink} from "react-router-dom";
+import { NavLink, useLocation} from "react-router-dom";
 import IsHome from "../isHome/IsHome";
+import { useMemo } from "react";
 
 const Header = () => {
- 
+ const {pathname}= useLocation();
+ const isHome = useMemo(()=> pathname === "/", [pathname]);
 
   return (
-    <header >
+    <header className={isHome ? 'bg-[url(./public/bg.jpg)] bg-center bg-cover' : 'bg-slate-800'} >
       <div className="mx-auto container px-5 py-5">
         <div className="flex justify-between items-center ">
           <div>
