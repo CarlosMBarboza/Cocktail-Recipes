@@ -11,7 +11,7 @@ export default function FavoritesPage() {
       <h1 className="text-4xl text-center font-bold">Favoritos</h1>
 
       {hasFavorites ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 m-6 ">
           {favorites.map( drink => (
               <DrinkCard
                 key={drink.idDrink}

@@ -9,11 +9,11 @@ const DrinkCard: React.FC<DrinkCardProps> = ({ drink }) => {
     const selectRecipe = useAppStore((state) => state.selectRecipe);
 
     return (
-        <div className="border mt-10 rounded-lg shadow-lg overflow-hidden">
+        <div className="border w-60 mt-10 mx-8 rounded-lg shadow-lg overflow-hidden">
             <img 
                 src={drink.strDrinkThumb} 
                 alt={`Imagen de ${drink.strDrink}`} 
-                className="w-full object-cover transition-transform transform hover:scale-110 hover:rotate-2"
+                className="w-60 object-cover "
             />
             <div className="p-5 text-center">
                 <h2 className="text-2xl font-bold truncate">{drink.strDrink}</h2>

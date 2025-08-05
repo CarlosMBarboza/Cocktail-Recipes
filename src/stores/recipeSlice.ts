@@ -1,7 +1,7 @@
-import { StateCreator } from "zustand"
+import type { StateCreator } from "zustand"
 import { getCategories, getRecipeById, getRecipes } from "../services/RecipeService"
 import type { Categories, Drink, Drinks, Recipe, SearchFilter } from "../types"
-import { FavoritesSliceType } from "./favoritesSlice"
+import type{ FavoritesSliceType } from "./favoritesSlice"
 
 export type RecipesSliceType = {
     categories: Categories

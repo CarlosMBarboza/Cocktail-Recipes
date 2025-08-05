@@ -43,8 +43,8 @@ export default function Header() {
     };
 
     return (
-        <header className={isHome ? 'bg-[url(/public/bg.jpg)] bg-center bg-cover' : 'bg-slate-800'}>
-            <div className="mx-auto container px-5 py-8">
+        <header className={isHome ? 'bg-[url(/public/bg.jpg)] bg-center bg-cover ' : 'bg-slate-800'}>
+            <div className="mx-auto container ">
                 <div className="flex justify-between items-center">
                     <div>
                         <img className="w-18 ml-24" src="/logo.svg" alt="logotipo" />
@@ -66,7 +66,7 @@ export default function Header() {
 
                 {isHome && (
                     <form
-                        className='md:w-1/2 2xl:w-1/3 my-32 p-10 rounded-lg shadow space-y-6'
+                        className='md:w-1/2 2xl:w-1/3  p-10 rounded-lg shadow space-y-6'
                         onSubmit={handleSubmit}
                     >
                         <div className='space-y-2'>

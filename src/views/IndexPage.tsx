@@ -12,7 +12,7 @@ export default function IndexPage() {
         <h1 className="text-4xl text-center font-bold">Recetas</h1>
 
         {hasDrinks ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  ">
             {drinks.drinks.map( (drink) => (
                 <DrinkCard
                   key={drink.idDrink}
