@@ -1,32 +1,34 @@
-import type { Drink } from "../types";
-import { useAppStore } from "../stores/useAppStore";
+import { useAppStore } from "../stores/useAppStore"
+import { Drink } from "../types"
 
 type DrinkCardProps = {
-    drink: Drink;
-};
+  recipe: Drink
+}
 
-const DrinkCard: React.FC<DrinkCardProps> = ({ drink }) => {
-    const selectRecipe = useAppStore((state) => state.selectRecipe);
+export default function DrinkCard({recipe} : DrinkCardProps) {
+  const selectRecipe = useAppStore((state) => state.selectRecipe)
 
-    return (
-        <div className="border w-60 mt-10 mx-8 rounded-lg shadow-lg overflow-hidden">
-            <img 
-                src={drink.strDrinkThumb} 
-                alt={`Imagen de ${drink.strDrink}`} 
-                className="w-60 object-cover "
+  return (
+      <div className="border shadow-lg">
+        <div className="overflow-hidden">
+            <img
+                src={recipe.strDrinkThumb}
+                className="hover:scale-125 transition-transform hover:rotate-2"
             />
-            <div className="p-5 text-center">
-                <h2 className="text-2xl font-bold truncate">{drink.strDrink}</h2>
-                <button
-                    type="button"
-                    className="mt-5 w-full p-3 bg-orange-400 hover:bg-orange-500 text-lg font-bold text-white rounded transition duration-200"
-                    onClick={() => selectRecipe(drink.idDrink)}
-                >
-                    Ver Receta
-                </button>
-            </div>
         </div>
-    );
-};
 
-export default DrinkCard;
+        <div className="p-5">
+            <h2 className="text-2xl truncate font-extrabold">
+              {recipe.strDrink}
+            </h2>
+            <button
+                type="button"
+                className="bg-orange-400 hover:bg-orange-500 mt-5 w-full p-3 font-bold text-white text-lg"
+                onClick={() => selectRecipe(recipe.idDrink)}
+            >
+                Ver Receta
+            </button>
+        </div>
+    </div>
+  )
+}
