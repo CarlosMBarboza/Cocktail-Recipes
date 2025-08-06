@@ -38,17 +38,17 @@ export default function Header() {
     <header
       className={isHome ? 'bg-header bg-cover bg-center' : 'bg-slate-800'}
     >
-        <div className="mx-auto container px-5 py-16">
-            <div className="flex justify-between items-center">
+        <div className="mx-auto container px-5 py-10">
+            <div className="flex justify-between ml-16 items-center">
                 <div>
-                  <img className="w-32" src="/logo.svg"  alt="logotipo" />
+                  <img className="w-20" src="/logo.svg"  alt="logotipo" />
 
                 </div>
-                <nav className="flex gap-4 text-white ">
+                <nav className="flex gap-4 text-white mr-16 ">
                   <NavLink
                     to={'/'}
                     className={({ isActive }) =>
-                      isActive ? "text-orange-500 uppercase font-bold" : "text-white uppercase font-bold" 
+                      isActive ? "text-orange-500 uppercase font-bold" : "text-white  font-bold" 
                     }
                   >
                       Inicio
@@ -56,7 +56,7 @@ export default function Header() {
                   <NavLink
                     to={'/favorites'}
                     className={({ isActive }) =>
-                      `text-${isActive ? 'orange-500' : 'white'} uppercase font-bold`
+                      `text-${isActive ? 'orange-500 uppercase' : 'white'}  font-bold`
                     }
                   >
                       Favoritos
@@ -65,7 +65,7 @@ export default function Header() {
                   <NavLink
                     to={'/generate'}
                     className={({ isActive }) =>
-                      `text-${isActive ? 'orange-500' : 'white'} uppercase font-bold`
+                      `text-${isActive ? 'orange-500 uppercase' : 'white'}  font-bold`
                     }
                   >
                       Generar con IA
@@ -76,12 +76,12 @@ export default function Header() {
             {isHome && (  
               <>          
                 <form
-                    className="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6"
+                    className="md:w-1/2 2xl:w-1/3 my-24 px-12 space-y-6"
                     onSubmit={handleSubmit}
                 >
                     <div className="space-y-4">
                         <label
-                            className="block text-white uppercase font-extrabold text-lg"
+                            className="block text-white  font-extrabold text-lg"
                             htmlFor="ingredient">Nombre o Ingredientes</label>
                         <input 
                             id="ingredient"
@@ -95,7 +95,7 @@ export default function Header() {
 
                     <div className="space-y-4">
                         <label
-                            className="block text-white uppercase font-extrabold text-lg"
+                            className="block text-white font-extrabold text-lg"
                             htmlFor="category">Categoría</label>
                         <select 
                             id="category"
